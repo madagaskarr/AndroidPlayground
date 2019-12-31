@@ -1,6 +1,6 @@
 package com.example.androidplayground.Dagger.Modules;
 
-import com.example.androidplayground.MainActivity;
+import com.example.androidplayground.Activities.MainActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
