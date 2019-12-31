@@ -18,6 +18,7 @@ import dagger.Provides;
 @Module
 public class ApplicationModule {
 
+    @Singleton
     @Provides
     static RequestOptions provideRequestOptions() {
         return new RequestOptions()
@@ -25,11 +26,13 @@ public class ApplicationModule {
                 .error(R.drawable.error_logo);
     }
 
+    @Singleton
     @Provides
     static RequestManager provideGlideInstance(Application application, RequestOptions requestOptions) {
         return Glide.with(application).setDefaultRequestOptions(requestOptions);
     }
 
+    @Singleton
     @Provides
     static Drawable provideLogoDrawable(Application application) {
         return ContextCompat.getDrawable(application, R.drawable.android_logo);
