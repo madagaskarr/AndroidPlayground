@@ -26,4 +26,30 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-}
+
+    // The latest Dagger version
+    // To check the latest versions: https://github.com/google/dagger
+    def daggerVersion = "2.25.4"
+
+    // Dagger core Java dependencies
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    // Dagger Android Java dependencies
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion" // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    // AndroidX support design (for nav drawer)
+    def material_version = "1.0.0"
+    implementation "com.google.android.material:material:$material_version"
+
+    // Glide
+    def glideVersion = "4.9.0"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+
+
+    // ViewModel and LiveData
+    def lifecycle_version = "2.1.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"}
